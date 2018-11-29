@@ -7,6 +7,10 @@ public class Dog {
     private int age;
     private Map<String,Object> attributes;
 
+    public Dog(){
+
+    }
+
     public Dog(String name, int age, Map<String, Object> attributes) {
         this.name = name;
         this.age = age;
