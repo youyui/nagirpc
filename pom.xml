@@ -18,6 +18,7 @@
     <properties>
         <kryo-serializers-version>0.42</kryo-serializers-version>
         <netty-all-version>4.1.28.Final</netty-all-version>
+        <spring-version>5.0.9.RELEASE</spring-version>
     </properties>
 
     <dependencies>
@@ -87,6 +88,11 @@
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-simple</artifactId>
                 <version>1.7.25</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-beans</artifactId>
+                <version>${spring-version}</version>
             </dependency>
         </dependencies>
 
