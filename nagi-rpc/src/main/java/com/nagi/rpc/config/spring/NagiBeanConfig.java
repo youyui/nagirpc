@@ -1,10 +1,11 @@
 package com.nagi.rpc.config.spring;
 
+import com.nagi.rpc.config.spring.context.annotation.NagiComponentScan;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan("com.nagi.rpc")
+@NagiComponentScan(packages = {"com.nagi.rpc"})
 public class NagiBeanConfig {
 
 }
