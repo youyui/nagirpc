@@ -29,7 +29,7 @@ public class NagiComponentScanRegistrar implements ImportBeanDefinitionRegistrar
     }
 
 
-
+    /**扫描@Service注解并注册到IOC**/
     private void registerServiceAnnotationBeanPostProcessor(Set<String> packagesToScan, BeanDefinitionRegistry registry) {
         BeanDefinitionBuilder definitionBuilder = rootBeanDefinition(NagiServiceAnnotationBeanPostProcessor.class);
         definitionBuilder.addConstructorArgValue(packagesToScan);
