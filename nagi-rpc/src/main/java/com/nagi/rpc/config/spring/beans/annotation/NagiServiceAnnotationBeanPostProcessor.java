@@ -32,6 +32,8 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
+import static com.nagi.rpc.config.spring.NagiConstant.nagi_service_prex;
+
 public class NagiServiceAnnotationBeanPostProcessor implements BeanDefinitionRegistryPostProcessor,EnvironmentAware {
     private final Logger logger = Logger.getLogger(this.getClass().getName());
 
@@ -113,7 +115,7 @@ public class NagiServiceAnnotationBeanPostProcessor implements BeanDefinitionReg
                         if(StringUtils.isEmpty(interfaceName)){
                             interfaceName = sbd.getBeanClassName();
                         }
-
+                        interfaceName = nagi_service_prex+interfaceName;
                         sbd.setResource(r1);
                         sbd.setSource(r1);
                         candidates.add(sbd);
