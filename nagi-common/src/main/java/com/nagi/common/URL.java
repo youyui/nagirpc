@@ -31,4 +31,24 @@ public class URL implements Serializable {
         this.path = path;
         this.params = params;
     }
+
+    public String getProtocol() {
+        return protocol;
+    }
+
+    public String getHost() {
+        return host;
+    }
+
+    public int getPort() {
+        return port;
+    }
+
+    public String getPath() {
+        return path;
+    }
+
+    public Map<String, String> getParams() {
+        return params;
+    }
 }
