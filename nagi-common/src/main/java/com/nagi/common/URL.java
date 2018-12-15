@@ -13,21 +13,24 @@ public class URL implements Serializable {
     private String protocol;//协议  默认 Nagi:
     private String host;//服务地址
     private int port;//端口
-    private String path;//服务名
+    private String service;//服务名
+    private String path;
     private Map<String,String> params;//url参数
 
     protected URL(){
         this.protocol = null;
         this.host = null;
         this.port = 0;
+        this.service = null;
         this.path = null;
         this.params = null;
     }
 
-    public URL(String protocol, String host, int port, String path, Map<String, String> params) {
+    public URL(String protocol, String host, int port, String service, String path, Map<String, String> params) {
         this.protocol = protocol;
         this.host = host;
         this.port = port;
+        this.service = service;
         this.path = path;
         this.params = params;
     }
@@ -50,5 +53,9 @@ public class URL implements Serializable {
 
     public Map<String, String> getParams() {
         return params;
+    }
+
+    public String getService() {
+        return service;
     }
 }
