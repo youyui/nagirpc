@@ -13,6 +13,7 @@
         <module>nagi-common</module>
         <module>nagi-netty</module>
         <module>nagi-rpc</module>
+        <module>nagi-registry</module>
     </modules>
 
     <properties>
